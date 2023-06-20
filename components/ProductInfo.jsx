@@ -20,54 +20,64 @@ const CustomTabBar = (props) => {
   );
 };
 
-export default function ProductInfo() {
+export default function ProductInfo({route}) {
+  const routes = route.params
+
   return (
-    <Tab.Navigator tabBar={(props) => <CustomTabBar {...props} />}>
+    <Tab.Navigator name="ProductInfo" tabBar={(props) => <CustomTabBar {...props} />}>
+      
       <Tab.Screen
         name="Descrição"
-        component={ProdutoDescricao}
+       
         options={{
           tabBarIcon: ({ color, size }) => (
             <Icon name="credit-card" color={color} size={size} />
           ),
         }}
-      />
+      >{() => <ProdutoDescricao dados={routes}/>}</Tab.Screen>
       <Tab.Screen
         name="Especificações"
-        component={ProdutoEspecificacao}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Icon name="tag" color={color} size={size} />
           ),
         }}
-      />
+      >
+        {() => <ProdutoEspecificacao dados={routes}/>}
+      </Tab.Screen>
       <Tab.Screen
         name="Avaliações"
-        component={ProdutoAvaliacao}
+        
         options={{
           tabBarIcon: ({ color, size }) => (
             <Icon name="star" color={color} size={size} />
           ),
         }}
-      />
+      >{() => <ProdutoAvaliacao dados={routes}/>}</Tab.Screen>
       <Tab.Screen
         name="Comentarios"
-        component={ProdutoComentarios}
+       
         options={{
           tabBarIcon: ({ color, size }) => (
             <Icon name="envelope" color={color} size={size} />
           ),
         }}
-      />
+      >
+        {() => <ProdutoComentarios dados={routes}/>}
+      </Tab.Screen>
       <Tab.Screen
         name="Vendedor"
-        component={ContatoVendedor}
+       
         options={{
           tabBarIcon: ({ color, size }) => (
             <Icon name="user" color={color} size={size} />
           ),
         }}
-      />
+      >
+      {() => <ContatoVendedor dados={routes}/>}
+    </Tab.Screen>
+
+      
     </Tab.Navigator>
   );
 }

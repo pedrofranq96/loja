@@ -2,16 +2,13 @@ import React from "react";
 import dbData from '../components/utils/db.json';
 import { Text, View, StyleSheet } from 'react-native';
 
-export default function ProdutoComentarios({comentarioId}) {
-  const comentarios = dbData.comentarios;
-  const comentario = comentarios.find((c) => c.id === comentarioId);
+export default function ProdutoComentarios({dados}) {
+  const {product: {comentarios}} = dados
 
-  if (!comentario) {
-    return <Text>Comentário não encontrado</Text>;
-  }
   return (
     <View style={styles.container}>
-      <View key={comentario.id}>
+      {comentarios.map((comentario)=> (
+        <View key={comentario.comentarioId}>
         <Text style={styles.comentario}>Comentário: {comentario.comentario}</Text>
         <View style={styles.infoContainer}>
           <View style={styles.infoRow}>
@@ -25,6 +22,8 @@ export default function ProdutoComentarios({comentarioId}) {
           <Text style={styles.info}>Nota: {comentario.nota}</Text>
         </View>
       </View>
+      ))}
+      
     </View>
   );
 }

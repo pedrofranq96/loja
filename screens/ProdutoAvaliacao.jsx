@@ -1,17 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import dbData from '../components/utils/db.json';
 import Icon from "react-native-vector-icons/FontAwesome";
 
-export default function ProdutoAvaliacao({ productId }){
-  const produto = dbData.produtos.find((p) => p.id === productId);
-  if (!produto) {
-    return <Text>Produto não encontrado</Text>;
-  }
+export default function ProdutoAvaliacao({ dados }){
+  const {product} = dados
   return(
     <View style={styles.container}>
       <Text style={styles.label}>Avaliações:</Text>
-      <Text style={styles.title}>{produto.avaliacoes} 
+      <Text style={styles.title}>{product.avaliacoes} 
           <Icon name="star" style={styles.specs} />
           <Icon name="star" style={styles.specs} />
           <Icon name="star" style={styles.specs} />

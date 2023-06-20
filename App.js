@@ -8,9 +8,9 @@ import About from './components/About';
 AppRegistry.registerComponent('loja', () => App);
 
 import Lista from './components/ListaProdutos';
-import Detalhes from './screens/ProdutoDetalhe';
-import ProdutoDuvidas from './screens/ProdutoDuvidas';
 
+import ProdutoDuvidas from './screens/ProdutoDuvidas';
+import ProductInfo from './components/ProductInfo';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -21,7 +21,7 @@ function MainStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Itens diversos" component={Lista}/>
-      <Stack.Screen name="Detalhes" component={Detalhes}/>
+      <Stack.Screen name="ProductInfo" component={ProductInfo}/>
       <Stack.Screen name="ProdutoDuvidas" component={ProdutoDuvidas} />
     </Stack.Navigator>
   );

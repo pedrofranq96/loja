@@ -1,16 +1,12 @@
 import React from 'react';
-import dbData from '../components/utils/db.json';
+
 import {Text, View, StyleSheet} from 'react-native';
 
 
-export default function ContatoVendedor({vendedorId}){
-    const contato = dbData.vendedor;
-    const vendedor = contato.find((v) => v.id === vendedorId);
-  
-    if (!vendedor) {
-      return <Text>Vendedor não encontrado</Text>;
-    }
-  
+export default function ContatoVendedor({dados}){
+  const {product: {vendedor}} = dados
+ 
+
     return (
       <View style={styles.container}>
         <Text style={styles.info}>Vendedor: {vendedor.name}</Text>

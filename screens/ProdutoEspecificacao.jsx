@@ -1,17 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import dbData from '../components/utils/db.json';
 
-export default function ProdutoEspecificacao({ productId }){
 
-  const produto = dbData.produtos.find((p) => p.id === productId);
-  if (!produto) {
-    return <Text>Produto não encontrado</Text>;
-  }
+export default function ProdutoEspecificacao({ dados }){
+  const {product: {especificacao}} = dados
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Especificações do Produto:</Text>
-      <Text style={styles.specs}>{produto.especificacao}</Text>
+      <Text style={styles.specs}>{especificacao}</Text>
     </View>
   )
 }

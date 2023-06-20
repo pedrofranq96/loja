@@ -17,8 +17,7 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
-    shadowRadius: 8, // Aumente o valor do raio para uma sombra mais difusa
-    elevation: 2,
+    shadowRadius: 8,
     marginTop: 5,
   },
   imagemProduto: {
@@ -28,6 +27,9 @@ const styles = StyleSheet.create({
   detalhesContainer: {
     justifyContent: 'center',
     marginLeft: 5, 
+    
+    textOverflow: 'ellipsis',
+    overflow: "hidden",
   },
   nomeProduto: {
     fontSize: 18,
@@ -36,6 +38,9 @@ const styles = StyleSheet.create({
   descricaoProduto: {
     fontSize: 14,
     color: '#888',
+
+    width: 200,
+    whiteSpace: 'nowrap',
   },
   precoProduto: {
     fontSize: 16,

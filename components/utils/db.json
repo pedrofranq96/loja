@@ -1,19 +1,90 @@
 {
     "produtos": [
-        {"productId": 1, "nome": "playstation", "image": "https://s2-techtudo.glbimg.com/FR4Bx333bmf7KNLv7TxQ7vAzPqY=/0x0:695x379/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/w/Y/Bj9Y9oQv2wobZuSRYwUg/2014-12-03-curiosidades-20-anos-playstation-one1.jpg", "description": "O console PlayStation 1 foi o primeiro console produzido pela Sony, e tornou-se um dos maiores sucessos de venda entre os consoles de mesa com mais de 100 milhões de unidades vendidas em todo o mundo, ficando atrás apenas do seu sucessor o PS2.","especificacao":"Fabricante Sony, Modelo Fat","avaliacoes":"5 estrelas", "price": 4000},
-        {"productId": 2, "nome": "Dean Dimebag", "image": "https://http2.mlstatic.com/D_NQ_NP_2X_861425-MLB69356959926_052023-F.webp", "description": "Um dos muitos tributos de Dimebag Darrell oferecidos por Dean, a Black Bolt ML combina o estilo ML clássico com um par de humbuckers Dean de alto rendimento, sintonizadores Grover e botões de tração DBD.","especificacao":"Marca Dean, Linha Dimebag Series - Black Bolt ML","avaliacoes":"5 estrelas", "price": 12000}
+        {
+            "productId": 1,
+            "nome": "playstation", 
+            "image": "https://s2-techtudo.glbimg.com/FR4Bx333bmf7KNLv7TxQ7vAzPqY=/0x0:695x379/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/w/Y/Bj9Y9oQv2wobZuSRYwUg/2014-12-03-curiosidades-20-anos-playstation-one1.jpg",
+            "description": "O console PlayStation 1 foi o primeiro console produzido pela Sony, e tornou-se um dos maiores sucessos de venda entre os consoles de mesa com mais de 100 milhões de unidades vendidas em todo o mundo, ficando atrás apenas do seu sucessor o PS2.",
+            "especificacao":"Fabricante Sony, Modelo Fat",
+            "avaliacoes":"5 estrelas", 
+            "price": 4000, 
+            "comentarios":[
+                {
+                    "comentarioId":1,
+                    "nome":"João",
+                    "data":"30/03/2022",
+                    "comentario":"Excelente Produto!",
+                    "nota":4.5
+                },
+                {"comentarioId":2,
+                "nome":"Paulo",
+                "data":"04/09/2023",
+                "comentario":"Guitarra insana demais!",
+                "nota":5.0
+            }
+
+        ],
+        "vendedor": 
+                    {
+                    "vendedorId":1,
+                    "name":"desconhecido",
+                    "telefone": 1111111111111,
+                    "email":"desconhecido@email.com", 
+                    "nota":2.3
+                    },
+                    "duvidas":
+                    {
+                    "duvidaId":1,
+                    "name":"Amanda",
+                    "data":"30/9/2022",
+                    "pergunta":"Qual o prazo pra entrega?",
+                    "resposta":"Após o pagamento ser compensado, enviamos no dia seguinte!"
+                    }
+    },
+        {
+            "productId": 2, 
+            "nome": "Dean Dimebag",
+            "image": "https://http2.mlstatic.com/D_NQ_NP_2X_861425-MLB69356959926_052023-F.webp",
+            "description": "Um dos muitos tributos de Dimebag Darrell oferecidos por Dean, a Black Bolt ML combina o estilo ML clássico com um par de humbuckers Dean de alto rendimento, sintonizadores Grover e botões de tração DBD.",
+            "especificacao":"Marca Dean, Linha Dimebag Series - Black Bolt ML",
+            "avaliacoes":"3 estrelas", 
+            "price": 12000,
+            "comentarios":[
+                {
+                    "comentarioId":1,
+                    "nome":"João",
+                    "data":"30/03/2022",
+                    "comentario":"Excelente Produto!",
+                    "nota":4.5
+                },
+                {"comentarioId":2,
+                "nome":"Paulo",
+                "data":"04/09/2023",
+                "comentario":"Guitarra insana demais!",
+                "nota":5.0
+            }],
+            "vendedor": 
+                    {
+                    "vendedorId":1,
+                    "name":"desconhecido",
+                    "telefone": 1111111111111,
+                    "email":"desconhecido@email.com", 
+                    "nota":2.3
+                    },
+            "duvidas":
+                    {
+                    "duvidaId":1,
+                    "name":"Amanda",
+                    "data":"30/9/2022",
+                    "pergunta":"Qual o prazo pra entrega?",
+                    "resposta":"Após o pagamento ser compensado, enviamos no dia seguinte!"
+                    }
+        }
         
-    ],
-    "vendedor": [
-        {"vendedorId":1,"name":"desconhecido","telefone": 1111111111111,"email":"desconhecido@email.com", "nota":2.3}
-    ],
-    "duvidas":[
-        {"duvidaId":1,"name":"Amanda","data":"30/9/2022","pergunta":"Qual o prazo pra entrega?","resposta":"Após o pagamento ser compensado, enviamos no dia seguinte!"}
-    ],
-    "comentarios":[
-        {"comentarioId":1,"nome":"João","data":"30/03/2022","comentario":"Excelente Produto!","nota":4.5},
-        {"comentarioId":2,"nome":"Paulo","data":"04/09/2023","comentario":"Guitarra insana demais!","nota":5.0}
     ]
+    
+    
+    
 }
 
 

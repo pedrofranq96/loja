@@ -41,7 +41,7 @@ export default function Lista({ navigation }){
     <ScrollView>
       <View style={styles.container}>
         {produtos.map((produto) => (
-          <TouchableOpacity key={produto.productId} onPress={() => navigation.navigate('Detalhes', { product: produto })}>
+          <TouchableOpacity key={produto.productId} onPress={() => navigation.navigate('ProductInfo', { product: produto })}>
 
             <View style={styles.produtoContainer}>
 
