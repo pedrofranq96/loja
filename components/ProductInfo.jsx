@@ -82,7 +82,7 @@ export default function ProductInfo({route}) {
        
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Icon name="help" color={color} size={size} />
+            <Icon name="question-circle" color={color} size={size} />
           ),
         }}
       >

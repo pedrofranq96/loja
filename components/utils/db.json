@@ -32,14 +32,22 @@
                     "email":"Paulo@email.com", 
                     "nota":2.3
                     },
-                    "duvidas":
-                    {
-                    "duvidaId":1,
-                    "name":"Amanda",
-                    "data":"30/9/2022",
-                    "pergunta":"Qual o prazo pra entrega?",
-                    "resposta":"Após o pagamento ser compensado, enviamos no dia seguinte!"
-                    }
+        "duvidas":[
+                        {
+                        "duvidaId":1,
+                        "name":"Amanda",
+                        "data":"30/9/2022",
+                        "pergunta":"Qual o prazo pra entrega?",
+                        "resposta":"Após o pagamento ser compensado, enviamos no dia seguinte!"
+                        },
+                        {
+                            "duvidaId":2,
+                            "name":"Maria",
+                            "data":"30/9/2022",
+                            "pergunta":"Qual o prazo pra troca?",
+                            "resposta":"Período de 30 dias"
+                        }
+                    ]      
     },
         {
             "productId": 2, 

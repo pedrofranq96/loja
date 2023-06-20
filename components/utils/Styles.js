@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     color: '#888',
 
     width: 200,
-    whiteSpace: 'nowrap',
+    
   },
   precoProduto: {
     fontSize: 16,

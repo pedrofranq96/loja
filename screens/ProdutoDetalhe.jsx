@@ -1,35 +1,30 @@
 import React from 'react';
-import { View, Text, Image,TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from "@react-navigation/native";
-//import styles from './utils/Styles';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+
 import ProductInfo from '../components/ProductInfo';
 
 
 
-export default function Detalhes({ route }) {
-  const { product } = route.params;
-  const navigation = useNavigation();
+export default function Detalhes({ dados }) {
+  const { product } = dados
+  console.log(produto); 
 
-  const navDuvidas = () => {
-    navigation.navigate('ProdutoDuvidas');
-  };
-
-  
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: product.image }}  style={styles.image}/>
-      <View style={styles.detailsContainer}>
-        <Text style={styles.name}>{product.nome}</Text>
-        <Text style={styles.price} >Preço: <Text style={styles.price2}>{product.price.toFixed(2)}</Text></Text>
+    <View>
+      <Image source={{ uri: product.image }} />
+      <View >
+        <Text >{product.nome}</Text>
+        <Text >
+          Preço: <Text >{product.price.toFixed(2)}</Text>
+        </Text>
       </View>
-       
-        <ProductInfo />
-        <TouchableOpacity style={styles.button} onPress={navDuvidas}>
-          <Text style={styles.buttonText}>Dúvidas sobre o produto</Text>
-      </TouchableOpacity>
+
+      <ProductInfo />
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {

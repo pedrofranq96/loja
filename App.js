@@ -11,6 +11,7 @@ import Lista from './components/ListaProdutos';
 
 import ProdutoDuvidas from './screens/ProdutoDuvidas';
 import ProductInfo from './components/ProductInfo';
+import Detalhes from './screens/ProdutoDetalhe';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -23,6 +24,7 @@ function MainStack() {
       <Stack.Screen name="Itens diversos" component={Lista}/>
       <Stack.Screen name="ProductInfo" component={ProductInfo}/>
       <Stack.Screen name="ProdutoDuvidas" component={ProdutoDuvidas} />
+      <Stack.Screen name="Detalhes" component={Detalhes}/>
     </Stack.Navigator>
   );
 }
