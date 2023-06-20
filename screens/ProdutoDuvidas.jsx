@@ -1,23 +1,23 @@
 import React from "react";
 import { View, Text } from "react-native";
-import dbData from '../components/utils/db.json';
-import { StyleSheet } from "react-native";
-export default function ProdutoDuvidas({ duvidaId }) {
-  const duvida = dbData.duvidas;
-  const prodDuvida = duvida.find((d) => d.id === duvidaId);
 
-  if (!prodDuvida) {
-    return <Text>Duvida não encontrada</Text>;
-  }
-  return(
-    <View style={styles.container}>
-    <Text style={styles.question}>Pergunta: {prodDuvida.pergunta}</Text>
-    <Text style={styles.info}>Nome: {prodDuvida.nome}</Text>
-    <Text style={styles.info}>Data: {prodDuvida.data}</Text>
-    <View style={styles.answerContainer}>
-      <Text style={styles.answerLabel}>Resposta do vendedor:</Text>
-      <Text style={styles.answer}>{prodDuvida.resposta}</Text>
-    </View>
+import { StyleSheet } from "react-native";
+export default function ProdutoDuvidas({ dados }) {
+ const {product: {duvidas}} = dados
+  return(   
+    <View>  
+  
+    {duvidas.map((duvida) =>(
+      <View style={styles.container}>
+      <Text style={styles.question}>Pergunta: {duvida.pergunta}</Text>
+      <Text style={styles.info}>Nome: {duvida.nome}</Text>
+      <Text style={styles.info}>Data: {duvida.data}</Text>
+      <View style={styles.answerContainer}>
+        <Text style={styles.answerLabel}>Resposta do vendedor:</Text>
+        <Text style={styles.answer}>{duvida.resposta}</Text>
+      </View>
+      </View>
+    ))}
   </View>
   )
 }

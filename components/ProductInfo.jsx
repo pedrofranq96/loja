@@ -8,6 +8,7 @@ import ProdutoEspecificacao from '../screens/ProdutoEspecificacao'
 import ProdutoAvaliacao  from '../screens/ProdutoAvaliacao'
 import ProdutoComentarios  from '../screens/ProdutoComentarios'
 import ContatoVendedor  from '../screens/ContatoVendedor'
+import ProdutoDuvidas from '../screens/ProdutoDuvidas'
 import styles from './utils/Styles';
 
 const Tab = createBottomTabNavigator();
@@ -75,6 +76,17 @@ export default function ProductInfo({route}) {
         }}
       >
       {() => <ContatoVendedor dados={routes}/>}
+    </Tab.Screen>
+    <Tab.Screen
+        name="Duvidas"
+       
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="help" color={color} size={size} />
+          ),
+        }}
+      >
+      {() => <ProdutoDuvidas dados={routes}/>}
     </Tab.Screen>
 
       

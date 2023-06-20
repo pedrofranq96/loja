@@ -19,7 +19,7 @@
                 {"comentarioId":2,
                 "nome":"Paulo",
                 "data":"04/09/2023",
-                "comentario":"Guitarra insana demais!",
+                "comentario":"O play 1 marcou minha infância!",
                 "nota":5.0
             }
 
@@ -27,9 +27,9 @@
         "vendedor": 
                     {
                     "vendedorId":1,
-                    "name":"desconhecido",
+                    "name":"Paulo",
                     "telefone": 1111111111111,
-                    "email":"desconhecido@email.com", 
+                    "email":"Paulo@email.com", 
                     "nota":2.3
                     },
                     "duvidas":
@@ -66,19 +66,27 @@
             "vendedor": 
                     {
                     "vendedorId":1,
-                    "name":"desconhecido",
+                    "name":"João",
                     "telefone": 1111111111111,
-                    "email":"desconhecido@email.com", 
+                    "email":"João@email.com", 
                     "nota":2.3
                     },
-            "duvidas":
+            "duvidas":[
                     {
                     "duvidaId":1,
                     "name":"Amanda",
                     "data":"30/9/2022",
                     "pergunta":"Qual o prazo pra entrega?",
                     "resposta":"Após o pagamento ser compensado, enviamos no dia seguinte!"
+                    },
+                    {
+                        "duvidaId":2,
+                        "name":"Maria",
+                        "data":"30/9/2022",
+                        "pergunta":"Qual o prazo pra troca?",
+                        "resposta":"Período de 30 dias"
                     }
+                ]        
         }
         
     ]

@@ -1,5 +1,5 @@
 import React from "react";
-import dbData from '../components/utils/db.json';
+
 import { Text, View, StyleSheet } from 'react-native';
 
 export default function ProdutoComentarios({dados}) {
